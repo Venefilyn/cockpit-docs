@@ -1,0 +1,5 @@
+name: cockpit
+version: ~
+title: Cockpit documentation
+nav:
+- modules/ROOT/nav.adoc

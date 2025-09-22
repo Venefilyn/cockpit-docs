@@ -1,0 +1,16 @@
+site:
+  title: Cockpit Docs
+  url: https://docs.cockpit-project.org/
+  start_page: cockpit::index.adoc
+content:
+  sources:
+  - url: .
+    branches: HEAD
+  - url: ./../cockpit
+    branches: HEAD
+    start_path: doc/guide/antora
+    worktrees: true
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
