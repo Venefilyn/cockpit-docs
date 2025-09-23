@@ -1,13 +1,12 @@
 site:
   title: Cockpit Docs
-  url: https://docs.cockpit-project.org/
   start_page: cockpit::index.adoc
 content:
   sources:
   - url: .
     branches: HEAD
-  - url: ./../cockpit
-    branches: HEAD
+  - url: https://github.com/bookwar/cockpit
+    branches: asciidoc-guide
     start_path: doc/guide/antora
     worktrees: true
 ui:
