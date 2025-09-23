@@ -1,3 +1,3 @@
-= Welcome!
+= Home page example
 
-You are home.
+Showing off a homepage.
