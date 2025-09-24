@@ -1,0 +1,21 @@
+= Cockpit docs website
+
+https://antora.org/[Antora]-based documentation for Cockpit Project. Currently a proof of work to showcase how Antora would look like for Cockpit.
+
+Uses a https://github.com/cockpit-project/cockpit/pull/21515[Cockpit PR that converts existing DocBook to AsciiDoc].
+
+== Quick start
+
+This uses `pnpm` for installation, but you could use any tool that processes `package.json` tbh.
+
+. `pnpm install` - installs all packages
+. `pnpm run build` - build Antora docs including other project components
+. `pnpm run serve` - starts web server for the built Antora docs
+
+== Why Antora
+
+Antora allows us to have multi-component and multi-page docs. Meaning it can incorporate not only docs from Cockpit with each document being its own page but also allows us to separate components based on our own definition. Components could be per-package docs.
+
+We also get the ability to have versions based on tags. This is still to be tested but it could mean we can have doc versions for all packages, including unreleased changes from source code directly.
+
+Another option was considered which was https://asciidoctor.org/[AsciiDoctor], but it only has built-in support for single-page. If we were to make it multi-page we'd have to basically write our own wrapper and basically create a worse and more complicated process than just using Antora.
