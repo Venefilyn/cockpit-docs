@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "antora antora-playbook.yml",
-    "build-new": "antora --fetch antora-playbook.yml",
+    "build-fetch": "antora --fetch antora-playbook.yml",
     "serve": "http-server build/site -c-1"
   },
   "keywords": [],

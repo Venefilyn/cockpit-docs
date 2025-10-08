@@ -8,9 +8,10 @@ Uses a https://github.com/cockpit-project/cockpit/pull/21515[Cockpit PR that con
 
 This uses `pnpm` for installation, but you could use any tool that processes `package.json` tbh.
 
-. `pnpm install` - installs all packages
-. `pnpm run build` - build Antora docs including other project components
-. `pnpm run serve` - starts web server for the built Antora docs
+. `pnpm install` - installs all packages.
+. `pnpm run build` - build Antora docs including other project components.
+. `pnpm run build-fetch` - same as `build` but force components to fetch.
+. `pnpm run serve` - starts web server for the built Antora docs.
 
 == Why Antora
 
