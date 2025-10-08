@@ -1,16 +1,27 @@
 site:
   title: Cockpit Docs
-  start_page: cockpit::index.adoc
+  start_page: cockpit-guide::index.adoc
 content:
+  # TODO: This will be
+  tags: v*
   sources:
-  - url: .
-    branches: HEAD
-  - url: https://github.com/bookwar/cockpit
+  # - url: .
+  #   branches: HEAD
+  - url: https://github.com/bookwar/cockpit.git
+    # TODO: Update when AsciiDoc PR is merged to Cockpit and also backport the docs to other branches.
     branches: asciidoc-guide
-    start_path: doc/guide/antora
-    worktrees: true
+    # Include latest branch, then other branches for those versions we support
+    # branches: [main, rhel-*]
+    # version: true
+    start_path: doc/guide
+    worktrees:
+antora:
+  extensions:
+  - ./extensions/cockpit-prerelease.js
 ui:
   bundle:
+    # TODO: Check if Fedora's Antora UI kit is better in some way
+    # TODO: Add supplemental CSS and header to make it more Cockpit-like
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files: ./supplemental-ui
