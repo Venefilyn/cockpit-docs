@@ -2,19 +2,17 @@ site:
   title: Cockpit Docs
   start_page: cockpit-guide::index.adoc
 content:
-  # TODO: This will be
-  tags: v*
   sources:
-  # - url: .
-  #   branches: HEAD
-  - url: https://github.com/bookwar/cockpit.git
+  - url: https://github.com/Venefilyn/cockpit.git
     # TODO: Update when AsciiDoc PR is merged to Cockpit and also backport the docs to other branches.
-    branches: asciidoc-guide
-    # Include latest branch, then other branches for those versions we support
+    branches:
+      # Include main branch
+      # - main
+      - doc/move-antora
+    # tags: v*
     # branches: [main, rhel-*]
     # version: true
-    start_path: doc/guide
-    worktrees:
+    start_path: doc/
 antora:
   extensions:
   - ./extensions/cockpit-prerelease.js
