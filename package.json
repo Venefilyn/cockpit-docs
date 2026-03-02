@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPLV3 OR LATER",
   "packageManager": "pnpm@10.9.0",
   "dependencies": {
     "antora": "^3.1.12",
