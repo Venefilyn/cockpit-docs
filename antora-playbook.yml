@@ -13,9 +13,12 @@ content:
     # branches: [main, rhel-*]
     # version: true
     start_path: doc/
-antora:
-  extensions:
-  - ./extensions/cockpit-prerelease.js
+runtime:
+  fetch: true
+  cache_dir: ./cache
+  log:
+    format: pretty
+    level: fatal
 ui:
   bundle:
     # TODO: Check if Fedora's Antora UI kit is better in some way
