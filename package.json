@@ -13,6 +13,7 @@
   "license": "GPLV3 OR LATER",
   "packageManager": "pnpm@10.9.0",
   "dependencies": {
+    "@antora/lunr-extension": "1.0.0-alpha.13",
     "antora": "^3.1.12",
     "http-server": "^14.1.1"
   }
