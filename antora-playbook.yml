@@ -1,17 +1,22 @@
 site:
   title: Cockpit Docs
   start_page: cockpit-guide::index.adoc
+urls:
+  latest_version_segment: latest
 content:
   sources:
-  - url: https://github.com/Venefilyn/cockpit.git
-    # TODO: Update when AsciiDoc PR is merged to Cockpit and also backport the docs to other branches.
-    branches:
-      # Include main branch
-      # - main
-      - doc/move-antora
-    # tags: v*
-    # branches: [main, rhel-*]
-    # version: true
+  - url: https://github.com/cockpit-project/cockpit.git
+    # Disable branches
+    branches: ~
+    tags:
+      # Catch all
+      - "*"
+      # Except for
+      - "!3{0..5}*"
+      - "!360"
+      - "!{0..2}*"
+      - "!v*"
+    version: true
     start_path: doc/
 runtime:
   fetch: true
@@ -30,7 +35,7 @@ antora:
   extensions:
   - id: prerelease
     require: ./extensions/cockpit-prerelease.js
-    enabled: true
+    enabled: false
   - id: lunr
     require: '@antora/lunr-extension'
     index_latest_only: true
