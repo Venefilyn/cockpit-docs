@@ -1,8 +1,6 @@
 = Cockpit docs website
 
-https://antora.org/[Antora]-based documentation for Cockpit Project. Currently a proof of work to showcase how Antora would look like for Cockpit.
-
-Uses a https://github.com/cockpit-project/cockpit/pull/21515[Cockpit PR that converts existing DocBook to AsciiDoc].
+https://antora.org/[Antora]-based documentation for Cockpit Project.
 
 Code written in this repository is registered under GPL-3.0-or-later. Recommendation for blog posts is to use CC-BY-SA-4.0 license.
 
