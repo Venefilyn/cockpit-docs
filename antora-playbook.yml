@@ -35,10 +35,14 @@ ui:
   supplemental_files: ./supplemental-ui
 antora:
   extensions:
-  - id: prerelease
-    require: ./extensions/cockpit-prerelease.js
+  - id: cockpit-prerelease
+    require: ./extensions/antora/cockpit-prerelease.js
     enabled: false
+
   - id: lunr
     require: '@antora/lunr-extension'
     index_latest_only: true
     enabled: true
+asciidoc:
+  extensions:
+  - ./extensions/asciidoc/man-inline-replace.js
